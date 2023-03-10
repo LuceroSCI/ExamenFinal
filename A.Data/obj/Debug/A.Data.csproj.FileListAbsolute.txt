@@ -1,0 +1,9 @@
+C:\Users\uset\source\repos\Academia\A.Data\bin\Debug\A.Data.dll
+C:\Users\uset\source\repos\Academia\A.Data\bin\Debug\A.Data.pdb
+C:\Users\uset\source\repos\Academia\A.Data\bin\Debug\A.Entidades.dll
+C:\Users\uset\source\repos\Academia\A.Data\bin\Debug\A.Entidades.pdb
+C:\Users\uset\source\repos\Academia\A.Data\obj\Debug\A.Data.csproj.AssemblyReference.cache
+C:\Users\uset\source\repos\Academia\A.Data\obj\Debug\A.Data.csproj.CoreCompileInputs.cache
+C:\Users\uset\source\repos\Academia\A.Data\obj\Debug\A.Data.csproj.CopyComplete
+C:\Users\uset\source\repos\Academia\A.Data\obj\Debug\A.Data.dll
+C:\Users\uset\source\repos\Academia\A.Data\obj\Debug\A.Data.pdb
