@@ -11,9 +11,9 @@ namespace A.Entidades
         public int Id { get; set; }
         public int IdAulmno { get; set; }
         public int IdCurso { get; set; }
-        public int Eva1 { get; set; }
-        public int Parcial { get; set; }
-        public int Eva2 { get; set; }
-        public int Final { get; set; }
+        public decimal Eva1 { get; set; }
+        public decimal Parcial { get; set; }
+        public decimal Eva2 { get; set; }
+        public decimal Final { get; set; }
     }
 }

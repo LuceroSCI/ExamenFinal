@@ -139,6 +139,7 @@
             this.txtEva1.Name = "txtEva1";
             this.txtEva1.Size = new System.Drawing.Size(100, 20);
             this.txtEva1.TabIndex = 10;
+            this.txtEva1.TextChanged += new System.EventHandler(this.txtEva1_TextChanged);
             // 
             // txtEva2
             // 
@@ -146,6 +147,7 @@
             this.txtEva2.Name = "txtEva2";
             this.txtEva2.Size = new System.Drawing.Size(100, 20);
             this.txtEva2.TabIndex = 11;
+            this.txtEva2.TextChanged += new System.EventHandler(this.txtEva2_TextChanged);
             // 
             // txtParcial
             // 
@@ -153,6 +155,7 @@
             this.txtParcial.Name = "txtParcial";
             this.txtParcial.Size = new System.Drawing.Size(100, 20);
             this.txtParcial.TabIndex = 12;
+            this.txtParcial.TextChanged += new System.EventHandler(this.txtParcial_TextChanged);
             // 
             // txtFinal
             // 

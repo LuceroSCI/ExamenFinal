@@ -27,10 +27,18 @@ namespace Ac.AppWin
         {
             dgvDatos.Rows.Clear();
             var listado = NotasBL.Listar();
+            var lista = AlumnosBL.Listar();
+            
+            foreach (var alumnos in lista)
+            {
+                dgvDatos.Rows.Add(alumnos.Id, alumnos.Codigo, alumnos.Apellidos, alumnos.Nombres);
+            }
             foreach (var notas in listado)
             {
-                dgvDatos.Rows.Add(notas.Id, notas.Eva1, notas.Parcial, notas.Eva2, notas.Final);
+                dgvDatos.Rows.Add(notas.Id, notas.IdCurso, notas.Eva1, notas.Parcial, notas.Eva2, notas.Final);
             }
+
+            
         }
         private void NuevoRegistro(object sender, EventArgs e)
         {

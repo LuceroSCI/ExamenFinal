@@ -26,16 +26,15 @@ namespace A.Data
                             Alumnos alumnos;
                             while (lector.Read())
                             {
-                                // CREAR UN NUEVO OBJETO ALUMNO
-                                alumnos = new Alumnos();
-                                alumnos.Id = (int)lector["Id"];
-                               // alumnos.Codigo = (int)lector["Codigo"];
-                                alumnos.Apellidos = lector["Apellidos"].ToString();
-                                alumnos.Nombres = lector["Nombres"].ToString();
-                                alumnos.Direccion = lector["Direccion"].ToString();
-                                alumnos.Email = lector["Email"].ToString();
-
-                                // AGREGAR EL CLIENTE AL LISTADO
+                                alumnos = new Alumnos()
+                                {
+                                    Id = int.Parse(lector["Id"].ToString()),
+                                    //Codigo = lector["Codigo"].ToString(),
+                                    Apellidos = lector["Apellidos"].ToString(),
+                                    Nombres = lector["Nombres"].ToString(),
+                                    Direccion = lector["Direccion"].ToString(),
+                                    Email = lector["Email"].ToString()
+                                };
                                 listado.Add(alumnos);
                             }
                         }

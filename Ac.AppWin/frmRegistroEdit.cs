@@ -54,10 +54,10 @@ namespace Ac.AppWin
         {
             this._notas.IdAulmno = int.Parse(cboAlumno.SelectedValue.ToString());
             this._notas.IdCurso = int.Parse(cboAlumno.SelectedValue.ToString());
-            this._notas.Eva1= int.Parse(txtEva1.Text);
-            this._notas.Parcial = int.Parse(txtParcial.Text);
-            this._notas.Eva2= int.Parse(txtEva2.Text);
-            this._notas.Final = int.Parse(txtFinal.Text);
+            this._notas.Eva1= decimal.Parse(txtEva1.Text);
+            this._notas.Parcial = decimal.Parse(txtParcial.Text);
+            this._notas.Eva2= decimal.Parse(txtEva2.Text);
+            this._notas.Final = decimal.Parse(txtFinal.Text);
 
             //this._notas.IdTipoCliente = int.Parse(cboTipoCliente.SelectedValue.ToString());
             // this._notas.Direccion = txtDireccion.Text;
@@ -66,6 +66,47 @@ namespace Ac.AppWin
             //this._cliente.Email = txtEmail.Text;
         }
 
-       
+        private void txtEva1_TextChanged(object sender, EventArgs e)
+        {
+            if (decimal.TryParse(txtEva1.Text, out decimal valor) && valor >= 0 && valor <= 20)
+            {
+              
+            }
+            else
+            {
+                MessageBox.Show("Ingrese nota de 0 a 20.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtEva1.Text = string.Empty;
+                txtEva1.Focus();
+            }
+        }
+
+        private void txtEva2_TextChanged(object sender, EventArgs e)
+        {
+            if (decimal.TryParse(txtEva2.Text, out decimal valor) && valor >= 0 && valor <= 20)
+            {
+                // El valor es válido, no se hace nada
+            }
+            else
+            {
+                // El valor no es válido, se muestra un mensaje de error y se borra el valor del TextBox
+                MessageBox.Show("Ingrese nota de 0 a 20.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtEva2.Focus();
+            }
+        }
+
+        private void txtParcial_TextChanged(object sender, EventArgs e)
+        {
+            if (decimal.TryParse(txtParcial.Text, out decimal valor) && valor >= 0 && valor <= 20)
+            {
+                // El valor es válido, no se hace nada
+            }
+            else
+            {
+                // El valor no es válido, se muestra un mensaje de error y se borra el valor del TextBox
+                MessageBox.Show("Ingrese nota de 0 a 20.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtParcial.Text = string.Empty;
+                txtParcial.Focus();
+            }
+        }
     }
 }

@@ -28,13 +28,13 @@ namespace A.Data
                             {
                                 // CREAR UN NUEVO OBJETO NOTAS
                                 notas = new Notas();
-                                notas.Id = (int)lector["Id"];
-                                notas.IdAulmno = (int)lector["IdAulmno"];
-                                notas.IdCurso = (int)lector["IdCurso"];
-                                notas.Eva1 = (int)lector["Eva1"];
-                                notas.Parcial = (int)lector["Parcial"];
-                                notas.Eva2 = (int)lector["Eva2"];
-                                notas.Final = (int)lector["Final"];
+                                //notas.Id = (int)lector["Id"];
+                                notas.IdAulmno = int.Parse(lector["IdAulmno"].ToString());
+                                notas.IdCurso = int.Parse(lector["IdCurso"].ToString());
+                                notas.Eva1 = (decimal)lector["Eva1"];
+                                notas.Parcial = (decimal)lector["Parcial"];
+                                notas.Eva2 = (decimal)lector["Eva2"];
+                                notas.Final = (decimal)lector["Final"];
 
                                 // AGREGAR EL NOTA AL LISTADO
                                 listado.Add(notas);
@@ -52,9 +52,9 @@ namespace A.Data
             using (var conexion = new SqlConnection(UtilDB.CadenaConexion()))
             {
                 conexion.Open();
-                var query = "INSERT INTO [dbo].[Notas] " +
-                 "([IdAulmno],[IdCurso],[Eva1],[Parcial],[Eva2],[Final]" +
-                "VALUES(@IdAulmno,@IdCurso,@Eva1,@Parcial,@Eva2,@Final)";
+                var query = "INSERT INTO [dbo].[Notas]" +
+                 "( [IdAulmno],[IdCurso],[Eva1],[Parcial],[Eva2],[Final]) " +
+                " VALUES(@IdAulmno,@IdCurso,@Eva1,@Parcial,@Eva2,@Final)";
                 using (var comando = new SqlCommand(query, conexion))
                 {
                     comando.Parameters.AddWithValue("@IdAulmno", notas.IdAulmno);
